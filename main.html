@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>IPv4 در مقابل IPv6</title>
+     <style>
+        /* Updated CSS with frame around the page */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
+        #container {
+            width: 95%;
+            margin: 0 auto;
+            border: 5px solid #d4af37;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #d4af37;
+            color: #333;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            position: relative;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+			font-size: 1.75em;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #d4af37;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 10px;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            display: block;
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        section {
+            flex: 1;
+            margin-right: 20px;
+            text-align: justify;
+            font-size: 2em; 
+        }
+        section img {
+            max-width: 100%;
+            max-height: 500px;
+            height: auto;
+            float: left;
+            margin: 0 0 10px 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #d4af37;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>مقایسه پروتکل های IPv4 و IPv6</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="main.html">خانه</a></li>
+                <li>
+                    <a href="#">بخش‌ها</a>
+                    <ul>
+                        <li><a href="protocols.html#ipv4-details">بررسی IPv4</a></li>
+                        <li><a href="protocols.html#ipv6-details">بررسی IPv6</a></li>
+                        <li><a href="key-differences.html">تفاوت‌های کلیدی</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>به وبسایت بررسی و مقایسه IPv4 و IPv6 خوش آمدید.</h2>
+                <p>دراین وبسایت به بررسی و مقایسه دو مورد از پر استفاده ترین پروتکل های رایج در سطح اینترنت پرداخته میشود. </p>
+                <p>شما میتوانید با استفاده از ناویگیشن بار بالا از طریق قسمت "بخش ها" به قسمت های مختلفی از این بررسی بروید.</p>
+				<p>این سایت برای ارایه ی موضوعی مرتبط به درس مهندسی کامپیوتر است که به جای پاورپوینت به شکل وبسایتی با کمک از html و js قالب گرفته.</p>
+            </section>
+            <section>
+                <img src="https://zaminhost.com/blog/wp-content/uploads/2022/10/%DA%A9%D8%A7%D9%88%D8%B1.png" alt="تصویر IPv4 IPv6">
+            </section>
+        </main>
+        <footer>
+            <p>پدرام اسماعیل دوست/درس مهندسی اینترنت/آقای فلاح راد/زمستان 02</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all the navigation links
+            var navLinks = document.querySelectorAll('nav a');
+
+            // For each navigation link
+            navLinks.forEach(function (link) {
+                // Add an event listener to enable navigation on click
+                link.addEventListener('click', function (event) {
+                    // Get the target section ID from the link's href attribute
+                    var targetSectionId = link.getAttribute('href');
+
+                    // Show the target section
+                    var targetSection = document.querySelector(targetSectionId);
+                    if (targetSection) {
+                        // Hide all sections except the target section
+                        var sections = document.querySelectorAll('section');
+                        sections.forEach(function (section) {
+                            section.style.display = 'none';
+                        });
+
+                        // Display the target section
+                        targetSection.style.display = 'block';
+                    }
+                });
+            });
+
+            // Smooth scroll to the target section when clicking links in sections
+            document.querySelectorAll('section a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    var targetId = this.getAttribute('href');
+                    var targetSection = document.querySelector(targetId);
+
+                    window.scrollTo({
+                        top: targetSection.offsetTop - document.querySelector('nav').offsetHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Show the section based on the URL hash
+            var currentHash = window.location.hash;
+            if (currentHash) {
+                var targetSection = document.querySelector(currentHash);
+                if (targetSection) {
+                    // Hide all sections except the target section
+                    var sections = document.querySelectorAll('section');
+                    sections.forEach(function (section) {
+                        section.style.display = 'none';
+                    });
+
+                    // Display the target section
+                    targetSection.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

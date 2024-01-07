@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ارائه IPv4 در مقابل IPv6</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; 
+            color: #fff; 
+        }
+        #container {
+            width: 95%;
+            margin: 0 auto;
+            border: 5px solid #d4af37;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #d4af37; 
+            color: #333;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            position: relative;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+			font-size: 150%;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #d4af37;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 10px;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            display: block;
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        section {
+            flex: 1;
+            margin-right: 20px;
+            text-align: justify;
+            font-size: 120%;
+        }
+		section img {
+			max-width: 100%;
+			max-height: 500px;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+}
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #d4af37;
+            color: #333; 
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .pagination a {
+            color: #d4af37;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+            cursor: pointer; 
+        }
+        .pagination a:hover {
+            background-color: #d4af37;
+            color: #333;
+        }
+
+        html {
+            font-size: 125%; 
+        }
+        body, h1, h2, p, a {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #d4af37;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>مقایسه پروتکل های IPv4 و IPv6</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="main.html">خانه</a></li>
+                <li>
+                    <a href="#">بخش‌ها</a>
+                    <ul>
+                        <li><a href="#ipv4-details">بررسی IPv4</a></li>
+                        <li><a href="#ipv6-details">بررسی IPv6</a></li>
+                        <li><a href="key-differences.html">تفاوت‌های کلیدی</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section id="ipv4-details">
+			<img src="https://www.cloudns.net/blog/wp-content/uploads/2023/03/IPv4-Address-Format.png" alt="Image">
+                <h2>بررسی IPv4</h2>
+                <p>پروتکل IPv4 (Internet Protocol version 4) یکی از اصلی‌ترین پروتکل‌های ارتباطی در شبکه‌های کامپیوتری است که برای ارسال و دریافت داده‌ها در شبکه‌های مبتنی بر پروتکل اینترنت (IP) استفاده می‌شود. IPv4 یکی از نسخه‌های اولیه پروتکل IP بوده و هنوز هم بسیار گسترده و استفاده‌شده است، اگرچه نسخه‌های جدیدتری نیز معرفی شده‌اند. در زیر، به معرفی و بررسی مهم‌ترین ویژگی‌ها و عناصر پروتکل IPv4 پرداخته می‌شود.</p>
+				    <p>
+        <strong>1. آدرس‌دهی (Addressing):</strong> IPv4 از آدرس‌دهی 32 بیتی برای شناسایی دستگاه‌ها در شبکه استفاده می‌کند. این آدرس‌ها به صورت 4 بخش 8 بیتی (نمونه: 192.168.1.1) نمایش داده می‌شوند. هر دستگاه در شبکه با یک IPv4 آدرس یکتا شناخته می‌شود.
+    </p>
+
+    <p>
+        <strong>2. زیرشبکه‌بندی (Subnetting):</strong> برای بهبود مدیریت و کنترل شبکه‌ها، IPv4 از زیرشبکه‌بندی استفاده می‌کند. این فرآیند به ما امکان می‌دهد تا یک شبکه را به بخش‌های کوچکتر (زیرشبکه‌ها) تقسیم کنیم، که هرکدام می‌توانند حاوی تعدادی دستگاه باشند.
+    </p>
+
+    <p>
+        <strong>3. پروتکل انتقال (Transmission Protocol):</strong> IPv4 برای انتقال داده‌ها از پروتکل انتقال (معمولاً TCP یا UDP) استفاده می‌کند. TCP برای ارتباطات قابل اعتماد و UDP برای ارتباطات سریع و کارآمد به کار می‌روند.
+    </p>
+
+    <p>
+        <strong>4. پویانمایی (Dynamic Host Configuration Protocol - DHCP):</strong> برای اختصاص آدرس‌های IP به دستگاه‌ها در شبکه، از پروتکل DHCP استفاده می‌شود. این پروتکل به دستگاه‌ها اجازه می‌دهد تا به صورت خودکار آدرس IP، دروازه (Gateway) و دیگر تنظیمات شبکه را دریافت کنند.
+    </p>
+
+   
+				<div class="pagination">
+                    <a href="ipv4-next.html">صفحه بعدی</a>
+                </div>
+            </section>
+            <section id="ipv6-details">
+				<img src="https://getvoip.com/uploads/Screen-Shot-2021-03-17-at-3.55.36-PM.png" alt="Image">
+                <h2>بررسی IPv6</h2>
+				<p>برخلاف پروتکل IPv4 که 32 بیتی است، پروتکل IPv6 از 128 بیت برای آدرس‌دهی استفاده می‌کند. در ادامه، به معرفی و بررسی پروتکل IPv6 می پردازیم:</p>
+                <p>
+        <strong>1. آدرس‌دهی (Addressing):</strong> IPv6 از آدرس‌دهی 128 بیتی استفاده می‌کند که به شباهت به نظارت عالم کتیرا (علامت $pi$) دارد و به صورت هشت گروه از چهار حرف‌رقمی نمایش داده می‌شود (مثال: 2001:0db8:85a3:0000:0000:8a2e:0370:7334). این طول آدرس بسیار بیشتر از IPv4 است و این اجازه را می‌دهد تا تعداد بسیار زیادی از آدرس‌ها را فراهم کند.
+    </p>
+
+    <p>
+        <strong>2. افزایش امنیت:</strong> IPv6 امکانات امنیتی را افزایش داده است. از IPSec به عنوان یک قسمت اجباری برای امنیت در ارتباطات استفاده می‌شود. این امکان به مدیران شبکه اجازه می‌دهد تا ارتباطات را بهبود بخشیده و اطلاعات را به صورت امن انتقال دهند.
+    </p>
+
+    <p>
+        <strong>3. سرعت و بهره‌وری:IPv6 بهبود‌های مهمی در سرعت و بهره‌وری ارائه می‌دهد. از جمله تعداد آدرس‌های بیشتر، کاهش overhead در هدر‌های IP و افزایش سرعت ارتباطات.
+    </p>
+
+    <p>
+        <strong>4. پشتیبانی از مسیریابی سهمیه‌ای:</strong> IPv6 از مفهوم مسیریابی سهمیه‌ای (Anycast) پشتیبانی می‌کند که به ایجاد خدمات مقیاس‌پذیر و قابل اطمینان کمک می‌کند.
+    </p>
+
+   
+                <div class="pagination">
+                    <a href="ipv6-next.html">صفحه بعدی</a>
+                </div>
+            </section>
+            <section id="key-differences">
+                <h2>تفاوت‌های کلیدی</h2>
+                <p>تفاوت‌های کلیدی بین IPv4 و IPv6 شامل طول آدرس، نمایش آدرس و پیچیدگی هدر است. IPv6 از آدرس‌های 128 بیتی که به صورت شاخصی نمایش داده می‌شوند، استفاده می‌کند و ساختار هدر را ساده‌تر می‌کند.</p>
+                <div class="pagination">
+                    <a href="key-differences-next.html">صفحه بعدی</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>پدرام اسماعیل دوست/درس مهندسی اینترنت/آقای فلاح راد/زمستان 02</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    var targetSectionId = link.getAttribute('href');
+
+                    var targetSection = document.querySelector(targetSectionId);
+                    if (targetSection) {
+                        var sections = document.querySelectorAll('section');
+                        sections.forEach(function (section) {
+                            section.style.display = 'none';
+                        });
+
+                        targetSection.style.display = 'block';
+                    }
+                });
+            });
+
+            document.querySelectorAll('section a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    var targetId = this.getAttribute('href');
+                    var targetSection = document.querySelector(targetId);
+
+                    window.scrollTo({
+                        top: targetSection.offsetTop - document.querySelector('nav').offsetHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            var currentHash = window.location.hash;
+            if (currentHash) {
+                var targetSection = document.querySelector(currentHash);
+                if (targetSection) {
+                    var sections = document.querySelectorAll('section');
+                    sections.forEach(function (section) {
+                        section.style.display = 'none';
+                    });
+
+                    targetSection.style.display = 'block';
+                }
+            }
+
+            document.querySelectorAll('.pagination a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.location.href = this.getAttribute('href');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

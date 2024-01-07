@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>صفحه بعدی IPv6</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
+        #container {
+            width: 95%;
+            margin: 0 auto;
+            border: 5px solid #d4af37;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #d4af37;
+            color: #333;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            font-size: 175%;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            position: relative;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #d4af37;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 10px;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            display: block;
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        section {
+            flex: 1;
+            margin-right: 20px;
+        }
+        section h2, section p {
+            font-size: 200%;
+        }
+        section img {
+            max-width: 100%;
+            max-height: 500px;
+            height: auto;
+            float: right;
+            margin: 0 0 10px 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #d4af37;
+            color: #333;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .pagination a {
+            color: #d4af37;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pagination a:hover {
+            background-color: #d4af37;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>مقایسه پروتکل های IPv4 و IPv6</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="main.html">خانه</a></li>
+                <li>
+                    <a href="#">بخش‌ها</a>
+                    <ul>
+                        <li><a href="protocols.html#ipv4-details">بررسی IPv4</a></li>
+                        <li><a href="protocols.html#ipv6-details">بررسی IPv6</a></li>
+                        <li><a href="key-differences.html">تفاوت‌های کلیدی</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>(2)بررسی IPv6</h2>
+				
+			<p>
+				<strong>5. پشتیبانی از (Autoconfiguration):</strong> IPv6 از پروتکل Autoconfiguration برای بهبود فرآیند اختصاص آدرس به دستگاه‌ها در شبکه استفاده می‌کند. این امکان به دستگاه‌ها اجازه می‌دهد که به صورت خودکار آدرس‌ها و سایر تنظیمات شبکه را تنظیم کنند.
+			</p>
+
+			<p>
+				<strong>6. حفاظت از سرعت افتراقی:</strong> IPv6 دارای قابلیت Flow Label است که به اطلاعات پروتکل‌های بالاتر از IP کمک می‌کند تا در حفاظت از سرعت افتراقی در انتقال داده‌ها دخیل باشند.
+			</p>
+			<p>
+				<strong>7. حفظ پشتیبانی از IPv4:</strong> IPv6 از تکنولوژی Dual Stack استفاده می‌کند که به دستگاه‌ها اجازه می‌دهد که همزمان با IPv4 و IPv6 کار کنند. این امکان به شکل تدریجی از IPv4 به IPv6 انتقال را فراهم می‌کند.
+			</p>
+			<p>
+				IPv6 با ارتقاء‌های امنیتی، افزایش آدرس‌دهی، بهبود سرعت و بهره‌وری، و پشتیبانی از خدمات بهتر، یک آینده روشن برای ارتباطات شبکه فراهم کرده است. استفاده از IPv6 در حال حاضر و در آینده نقش کلیدی در توسعه اینترنت باز خواهد داشت.
+			</p>
+
+                <div class="pagination">
+                    <a href="protocols.html#ipv6-details">صفحه قبلی</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>پدرام اسماعیل دوست/درس مهندسی اینترنت/آقای فلاح راد/زمستان 02</p>
+        </footer>
+    </div>
+</body>
+</html>

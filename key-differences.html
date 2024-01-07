@@ -1,0 +1,160 @@
+<!-- key-differences.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ارائه IPv4 در مقابل IPv6</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
+        #container {
+            width: 95%;
+            margin: 0 auto;
+            border: 5px solid #d4af37;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #d4af37;
+            color: #333;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            position: relative;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+			font-size: 150%;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #d4af37;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 10px;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            display: block;
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        section {
+            flex: 1;
+            margin-right: 20px;
+        }
+        section h2, section p {
+            font-size: 200%;
+        }
+        
+		section img {
+			max-width: 100%;
+			max-height: 500px;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #d4af37;
+            color: #333;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .pagination a {
+            color: #d4af37;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pagination a:hover {
+            background-color: #d4af37;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>مقایسه پروتکل های IPv4 و IPv6</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="main.html">خانه</a></li>
+                <li>
+                    <a href="#">بخش‌ها</a>
+                    <ul>
+                        <li><a href="protocols.html#ipv4-details">بررسی IPv4</a></li>
+                        <li><a href="protocols.html#ipv6-details">بررسی IPv6</a></li>
+                        <li><a href="key-differences.html">تفاوت‌های کلیدی</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+				<img src="https://academy.avast.com/hs-fs/hubfs/New_Avast_Academy/IPv4%20vs.%20IPv6%20What%E2%80%99s%20the%20Difference/IPv4-vs-IPv6.png?width=2750&name=IPv4-vs-IPv6.png" alt="Image">
+                <h2>تفاوت‌های کلیدی</h2>
+				<p>
+					IPv6 از یک فرمت آدرس دهی 128 بیتی استفاده می کند و به طور نمایی فضای آدرس را به حدود 3.4 × 10^38 آدرس منحصر به فرد گسترش می دهد. این مجموعه وسیع از آدرس‌ها، پاسخی فعال به محدودیت‌های IPv4 است که تعداد بی‌محدودیتی از دستگاه‌ها را قادر می‌سازد به اینترنت متصل شوند. افزایش فضای آدرس یک مزیت حیاتی IPv6 است، به خصوص که شاهد گسترش دستگاه های IoT و رشد مداوم فناوری های متصل به اینترنت هستیم.
+				</p>
+
+				<p>
+					ویژگی های امنیتی نیز IPv6 را از نسل قبلی خود متمایز می کند. در حالی که IPv4 با گنجاندن پروتکل‌های امنیتی مانند IPsec پیشرفت‌هایی را به خود دیده است، IPv6 این ویژگی‌ها را به‌عنوان اجزای استاندارد ترکیب می‌کند. ادغام IPsec در IPv6 محیط ارتباطی امن‌تری را تضمین می‌کند و نگرانی‌های مربوط به یکپارچگی داده‌ها، محرمانه بودن و احراز هویت در لایه شبکه را برطرف می‌کند.
+				</p>
+
+
+                <div class="pagination">
+                    <a href="key-differences-2.html">صفحه بعدی</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>پدرام اسماعیل دوست/درس مهندسی اینترنت/آقای فلاح راد/زمستان 02</p>
+        </footer>
+    </div>
+</body>
+</html>
